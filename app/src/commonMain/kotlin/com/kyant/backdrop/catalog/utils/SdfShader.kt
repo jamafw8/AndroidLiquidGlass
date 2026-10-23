@@ -18,6 +18,17 @@ fun rememberSdfShader(drawableResource: DrawableResource): SdfShader {
 
 expect fun SdfShader(imageBitmap: ImageBitmap): SdfShader
 
+expect fun ImageBitmapFromPixels(pixels: IntArray, width: Int, height: Int): ImageBitmap
+
+expect fun renderClockSdfBitmapCpu(
+    text: String,
+    fontHeight: Float,
+    fontWidth: Float,
+    fontWeight: Float,
+    fontSoftness: Float,
+    fontBytes: ByteArray
+): ImageBitmap
+
 @Immutable
 interface SdfShader {
 
